@@ -1,0 +1,9 @@
+
+
+CREATE COMPUTE MODULE git_test_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		
+		SET OutputRoot.XMLNSC.Data.Result = 'Git test Ado Test successful';
+	END;
+END MODULE;
