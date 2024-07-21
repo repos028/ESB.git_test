@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a one-line script'
 - task: CmdLine@2
   inputs:
-    script: 'cd C:\Program Files\IBM\ACE\12.0.9.0\server\bin&&mqsiprofile&&mqsicreatebar -data "C:\Users\anupa\IBM\ACET12\workspace" -b "C:\Program Files\IBM\ACE\12.0.9.0\%APP_NAME%\target\ace\%APP_NAME%.bar" -cleanBuild  -a %APP_NAME% -deployAsSource -trace -v createbartrace.txt&&mqsideploy TESTNODE -e default -a "C:\Program Files\IBM\ACE\12.0.9.0\%APP_NAME%\target\ace\%APP_NAME%.bar"'
+    script: 'cd C:\Program Files\IBM\ACE\12.0.9.0\server\bin&&mqsiprofile&&mqsicreatebar -data "C:\Users\anupa\IBM\ACET12\workspace" -b "C:\Program Files\IBM\ACE\12.0.9.0\%APP_NAME%\target\ace\%APP_NAME%.bar" -cleanBuild  -a %APP_NAME% -deployAsSource -trace -v createbartrace.txt&&mqsideploy %INT_NODE% -e %INT_SERVER% -a "C:\Program Files\IBM\ACE\12.0.9.0\%APP_NAME%\target\ace\%APP_NAME%.bar"'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
