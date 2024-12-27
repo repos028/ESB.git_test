@@ -5,5 +5,6 @@ CREATE COMPUTE MODULE git_test_Compute
 	BEGIN
 		
 		SET OutputRoot.XMLNSC.Data.Result = 'Git test Ado Test successful';
+-- testing
 	END;
 END MODULE;
